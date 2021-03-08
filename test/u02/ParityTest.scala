@@ -6,7 +6,7 @@ class ParityTest {
 
   import Parity._;
 
-  @Test def testParity(): Unit = {
+  @Test def testParityDef(): Unit = {
     assertEquals("even", parity(2))
     assertEquals("odd", parity(1))
   }
