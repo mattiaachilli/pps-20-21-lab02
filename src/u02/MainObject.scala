@@ -23,6 +23,8 @@ object MainObject extends App{
   //3.b
   def neg(predicate: String => Boolean): String => Boolean = (s) => !predicate(s)
 
+  val negVal: (String => Boolean) => (String => Boolean) = predicate => !predicate(_)
+
   val empty: String => Boolean = _ == ""
   val sizeMajorFive: String => Boolean = s => s.length > 5
 
@@ -33,6 +35,6 @@ object MainObject extends App{
   println(notSizeFive("ciaooooo"))
 
   //3.c
-
+  def neg[A](predicate: A => Boolean): A => Boolean = (p) => !predicate(p)
 
 }
