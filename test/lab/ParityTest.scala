@@ -1,10 +1,11 @@
-package u02
-import org.junit.jupiter.api.Assertions._;
+package lab
+
+import org.junit.jupiter.api.Assertions._
 import org.junit.jupiter.api.Test;
 
 class ParityTest {
 
-  import Parity._;
+  import lab.Parity._;
 
   @Test def testParityDef(): Unit = {
     assertEquals("even", parity(2))

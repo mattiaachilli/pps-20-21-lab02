@@ -1,17 +1,18 @@
-package u02
+package lab
+
 import org.junit.jupiter.api.Assertions._
-import org.junit.jupiter.api.{BeforeEach, Test};
+import org.junit.jupiter.api.Test;
 
 class NegTest {
 
-  import Neg._;
+  import lab.Neg._;
 
   val empty: String => Boolean = _ == ""
   val notEmpty: String => Boolean = neg(empty)
 
   val notEmptyVal: String => Boolean = negVal(empty)
 
-  val emptyInt: Int => Boolean = _== 0
+  val emptyInt: Int => Boolean = _ == 0
   val notIntEmptyGenerics: Int => Boolean = negGenerics(emptyInt)
 
   @Test def testNegDef(): Unit = {

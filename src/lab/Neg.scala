@@ -1,4 +1,4 @@
-package u02
+package lab
 
 object Neg {
   def neg(predicate: String => Boolean): String => Boolean = (s) => !predicate(s)

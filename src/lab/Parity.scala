@@ -1,4 +1,4 @@
-package u02
+package lab
 
 object Parity extends App {
 

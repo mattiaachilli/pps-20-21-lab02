@@ -24,6 +24,5 @@ object Currying extends App {
 
   println(curriedMultAsFunction(10)(2)) // 20
   println(curriedMultAsFunction) // u02.Currying$$$Lambda$7/...
-  println(curriedMultAsFunction(10)) // u02.Currying$$$Lambda$12/...
-
+  println(curriedMultAsFunction(10)) // u02.Currying$$$Lambda$12/..
 }
