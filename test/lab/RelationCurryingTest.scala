@@ -48,4 +48,18 @@ class RelationCurryingTest {
     assertTrue(partiallyApplied(3))
     assertFalse(partiallyApplied(0))
   }
+
+  @Test def testComposeGenerics(): Unit = {
+    val f: String => Boolean = {
+      case "even" => true
+      case "odd"  => false
+    }
+    val g: Int => String = {
+      case n if n % 2 == 0 => "even"
+      case _ => "odd"
+    }
+    val isEven = compose(f, g)
+    assertTrue(isEven(4))
+    assertFalse(isEven(5))
+  }
 }

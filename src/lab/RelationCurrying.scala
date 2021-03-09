@@ -8,4 +8,6 @@ object RelationCurrying extends App {
   lazy val nonCurriedVal = (x: Int, y: Int, z: Int) => nonCurried(x, y, z)
 
   lazy val curriedVal: Int => Int => Int => Boolean = x => y => z => nonCurried(x, y, z)
+
+  def compose[A, B, C](f: B => C, g: A => B): A => C = x => f(g(x))
 }
