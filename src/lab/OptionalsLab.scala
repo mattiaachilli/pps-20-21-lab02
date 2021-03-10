@@ -30,5 +30,10 @@ object OptionalsLab extends App {
       case Some(a) => Some(predicate(a))
       case _ => None()
     }
+
+    def map2[A, B, C](opt1: Option[A])(opt2: Option[B])(f: (A, B) => C): Option[C] = (opt1, opt2) match {
+      case (Some(a), Some(b)) => Some(f(a, b))
+      case _ => None()
+    }
   }
 }
