@@ -25,5 +25,10 @@ object OptionalsLab extends App {
       case Some(a) if predicate(a) => Some(a)
       case _ => None()
     }
+
+    def map[A, B](opt: Option[A])(predicate: A => B): Option[B] = opt match {
+      case Some(a) => Some(predicate(a))
+      case _ => None()
+    }
   }
 }
