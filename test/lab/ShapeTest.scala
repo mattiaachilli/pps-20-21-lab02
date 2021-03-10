@@ -6,8 +6,6 @@ import Shape.Shape._
 
 class ShapeTest {
 
-  import lab.Shape._;
-
   val square: Square = Square(5)
   val rectangle: Rectangle = Rectangle(6, 4)
   val circle: Circle = Circle(5)
