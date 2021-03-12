@@ -5,8 +5,8 @@ import scala.annotation.tailrec
 
 object Fibonacci extends App {
   def fib(n: Int): Int = n match {
-    case n if n <= 1 && n >= 0 => n
-    case n if n > 0 => fib(n - 1) + fib(n - 2)
+    case 0 | 1 => n
+    case n if n > 1 => fib(n - 1) + fib(n - 2)
   }
 
   def fibTail(n: Int): Int = {
